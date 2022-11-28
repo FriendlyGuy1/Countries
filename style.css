@@ -1,0 +1,64 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+#main_div, #nav {
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+
+#main_div > div {
+    border: solid black;
+    position: relative;
+    
+}
+
+.continent {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+
+.center {
+    text-align: center;
+}
+
+.Africa {
+    background-color: aquamarine;
+}
+
+.Europe {
+    background-color: green;
+}
+
+.NA {
+    background-color: gray;
+}
+
+.SA {
+    background-color: yellowgreen;
+}
+
+.Asia {
+    background-color: black;
+    color: white;
+}
+
+.Antarctica {
+    background-color: olive ;
+}
+
+#nav {
+    justify-content: space-around;
+    padding-bottom: 10px;
+    padding-top: 5px;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
