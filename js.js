@@ -110,15 +110,31 @@ allCountries.map(countries => {
     main_div.appendChild(country_div);
 })
 
-let header_buttons = document.querySelector("header");
-header_buttons.setAttribute("id", "nav");
+const continents_buttons = document.querySelector('header');
 
-temp_continent.forEach(continents =>{
-    let button = document.createElement("button");        
-    button.innerText = continents;
-    header_buttons.appendChild(button);
-            button.addEventListener("click", function(){
+temp_continent.forEach(continents => {
+    const menuButton = document.createElement('button');
+    menuButton.innerText = continents;
+    continents_buttons.appendChild(menuButton);
+})
 
-            })
-   }
-)
+
+const my_buttons = document.getElementsByTagName('button');
+const card_continents = document.getElementsByTagName('h3');
+
+for (let one_category of my_buttons) {
+
+    one_category.addEventListener('click',
+        () => { getCountry(one_category.innerText) })
+}
+
+const getCountry = (continents) => {
+    for(let i of card_continents){
+        if(i.innerText === continents || continents === "all"){
+            i.parentElement.style.display="block";
+        }else{
+            i.parentElement.style.display="none";
+        }
+    }
+
+}
