@@ -2,10 +2,15 @@ import allCountries from './data.js';
 console.log(allCountries);
 
 const main_div = document.getElementById('main_div')
-
+let temp_continent = ["all"];
+let temp_btn = [];
 
 allCountries.map(countries => {
     //  console.log(countries.name.common)
+    temp_btn.push(countries.continents[0])
+    if(!temp_continent.includes(countries.continents[0])){
+        temp_continent.push(countries.continents[0])
+    } 
 
     let country_div = document.createElement('div');
     let country_name = document.createElement('h3');
@@ -92,7 +97,7 @@ allCountries.map(countries => {
     let currency = document.createElement("h3");
 
     if (typeof countries.currencies === 'object'){
-        currency.innerText = "Curencies: ";
+        currency.innerText = "Currencies: ";
         for(let i in countries.currencies){
             currency.innerText += `${countries.currencies[i].name} `
         }
@@ -101,7 +106,19 @@ allCountries.map(countries => {
     currency.setAttribute("class","center");
     country_div.appendChild(currency);
 
-    
 
     main_div.appendChild(country_div);
 })
+
+let header_buttons = document.querySelector("header");
+header_buttons.setAttribute("id", "nav");
+
+temp_continent.forEach(continents =>{
+    let button = document.createElement("button");        
+    button.innerText = continents;
+    header_buttons.appendChild(button);
+            button.addEventListener("click", function(){
+
+            })
+   }
+)

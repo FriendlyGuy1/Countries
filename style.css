@@ -27,31 +27,6 @@
     text-align: center;
 }
 
-.Africa {
-    background-color: aquamarine;
-}
-
-.Europe {
-    background-color: green;
-}
-
-.NA {
-    background-color: gray;
-}
-
-.SA {
-    background-color: yellowgreen;
-}
-
-.Asia {
-    background-color: black;
-    color: white;
-}
-
-.Antarctica {
-    background-color: olive ;
-}
-
 #nav {
     justify-content: space-around;
     padding-bottom: 10px;
@@ -61,4 +36,12 @@
 a{
     text-decoration: none;
     color: black;
+}
+
+.btn-none {
+    display: none;
+}
+
+.btn-show {
+    display: block;
 }
